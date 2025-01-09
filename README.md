@@ -3,7 +3,7 @@
 1. Simply save this workspace e.g., 
     ```
     cd ~/ros2 # cd into the dir you want to keep this workspace in
-    git clone https://github.com/naslab-projects/sim_ws.git
+    git clone https://github.com/Purdue-ME597/sim_ws.git
     ```
 
 2. In a new terminal build the sim_ws workspace: 
