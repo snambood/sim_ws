@@ -58,8 +58,14 @@ install(
     src/lab4/task1.py
     src/lab4/task2.py
     src/lab4/task3.py
-    src/lab4/dynamic_obstacles.py
+    src/lab4/static_obstacles.py
   DESTINATION lib/${PROJECT_NAME}
+)
+install(
+  PROGRAMS
+    src/lab4/spawn_objects.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME spawn_objects
 )
 
 

@@ -59,7 +59,7 @@ def generate_launch_description():
 
         Node(
             package='turtlebot3_gazebo',
-            executable='spawn_objects',
+            executable='spawn_objects.py',
             name='spawn_objects',
             output='screen',
             condition=IfCondition(LaunchConfiguration('spawn_objects'))
