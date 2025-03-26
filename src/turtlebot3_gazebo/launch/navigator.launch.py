@@ -38,7 +38,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             'spawn_objects',
-            default_value='true',
+            default_value='false',
             description='Whether to spawn objects'
         ),
 
@@ -51,7 +51,7 @@ def generate_launch_description():
         # Conditionally enable dynamics obstacles if the argument is set to "true"
         Node(
             package='turtlebot3_gazebo',
-            executable='static_obstacles.py',
+            executable='static_obstacles',
             name='static_obstacles',
             output='screen',
             condition=IfCondition(LaunchConfiguration('static_obstacles'))

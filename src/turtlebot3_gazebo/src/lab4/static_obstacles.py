@@ -23,9 +23,9 @@ class GazeboModelHandler(Node):
         while not self.set_state_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Set state service not available, waiting again...')
         
-        self.spawn_model('red_object','red_object')
-        self.spawn_model('blue_object','blue_object')
-        self.spawn_model('green_object','green_object')
+        self.spawn_model('obstacle0','trash_can')
+        self.spawn_model('obstacle1','trash_can')
+
 
         self.timer = self.create_timer(0.1, self.timer_callback)
         self.elapsed = 0
@@ -67,10 +67,10 @@ class GazeboModelHandler(Node):
         t = self.elapsed
         y0 = 0.5
         y1 = -0.7
-        y2 = 0.8
-        self.set_model_position(-3.75, y0, 'red_object')
-        self.set_model_position(6.0, y1, 'blue_object')
-        self.set_model_position(8.0,y2,'green_object')
+ 
+        self.set_model_position(-3.75, y0, 'obstacle0')
+        self.set_model_position(6.0, y1, 'obstacle1')
+
         self.elapsed = (self.elapsed + 1) % 201  # Increment and reset after reaching 200
 
     def set_model_position(self, x, y, model_name):
